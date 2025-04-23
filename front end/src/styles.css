@@ -1,0 +1,45 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+  
+.container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f0f0f0;
+}
+  
+.centered-text {
+    z-index: 2;
+    color: #fff; /* Change text color to white for better contrast */
+}
+  
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('public/circuitimage.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+  
+.background-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Adjust transparency here */
+    z-index: 2;
+    pointer-events: none;
+}
